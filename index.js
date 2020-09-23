@@ -10,7 +10,7 @@ function between(min,max){return Math.floor(Math.random()*(max-min)+min)}
 
 client.once('ready',()=>{
 console.log('Ready!');
-client.user.setActivity(`commands`,{type:'WATCHING'});
+client.user.setActivity(`commands | Prefix: ${prefix}`,{type:'WATCHING'});
 });
 
 client.on('message',message=>{
