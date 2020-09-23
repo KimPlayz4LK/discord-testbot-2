@@ -36,4 +36,12 @@ message.channel.send(embed);
 
 }});
 
+client.on('message',message=>{
+if(message.author.bot===false){
+
+if(message.content.includes(`<@!${message.guild.owner.id}>`)&&message.guild.owner.presence.status===`online`){message.guild.owner.send(`**You were pinged!**\r\nServer: ${message.guild.name}\r\nChannel: ${message.channel.name}\r\nPinged by: ${message.author.tag} (${message.author})\r\nLink: https://discord.com/channels/${message.guild.id}/${message.channel.id}/${message.id}`);message.react(`:pingBadge1:758199090827493398`);}
+if(message.content.includes(`ping`)){message.react(`:pingBadge1:758199090827493398`);}
+
+}});
+
 client.login(token);
