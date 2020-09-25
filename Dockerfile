@@ -20,4 +20,4 @@ RUN npm install --production
 COPY . .
 
 CMD sh /boot.sh && npm start
-CMD npm start
+# RUN node index.js
